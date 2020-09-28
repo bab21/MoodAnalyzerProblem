@@ -18,8 +18,7 @@ public class MoodAnalyzerTester {
 	public void testAnalyseMood() {
 		//fail("Not yet implemented");
 		assertEquals("SAD",moodanalyzer.analyseMood("I am in Sad mood"));
-		
-		
+		assertEquals("HAPPY",moodanalyzer.analyseMood("I am in any mood"));		
 	}
 
 }
