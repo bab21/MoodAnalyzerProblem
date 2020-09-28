@@ -46,6 +46,7 @@ public class MoodAnalyzerTester {
 		}
 		catch(MoodAnalysisException e) {
 			System.out.println(e.type);
+			assertEquals(MoodAnalysisException.ExceptionType.ENTERED_EMPTY,e.type);
 			
 		}
 	}
