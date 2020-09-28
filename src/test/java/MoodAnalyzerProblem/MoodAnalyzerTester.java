@@ -16,6 +16,7 @@ public class MoodAnalyzerTester {
 		assertEquals("SAD",object1.analyseMood());
 				
 	}
+	
 	@Test
 	public void givenNullMoodShouldReturnHappy() {
         MoodAnalyzer object2=new MoodAnalyzer(null);
