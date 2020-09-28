@@ -10,11 +10,11 @@ public class MoodAnalyzer {
 	}
 	public static void main(String[] args) {
 		MoodAnalyzer objS=new MoodAnalyzer();
-		String ans1=objS.analyseMood("i an very sad");
+		String ans1=objS.analyseMood("i am sad");
 		System.out.println("Analyzing mood result: "+ans1);
 		
 		MoodAnalyzer objH=new MoodAnalyzer();
-		String ans2=objH.analyseMood("i an fine");
+		String ans2=objH.analyseMood("i am fine");
 		System.out.println("Analyzing mood result: "+ans2);
 		
 	}
