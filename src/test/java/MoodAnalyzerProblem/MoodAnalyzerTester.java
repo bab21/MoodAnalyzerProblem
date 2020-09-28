@@ -7,18 +7,16 @@ import org.junit.Test;
 import com.capgemini.*;
 
 public class MoodAnalyzerTester {
-	MoodAnalyzer moodanalyzer;
 	
-	@Before
-	public void before() {
-		moodanalyzer=new MoodAnalyzer();
-	}
 
 	@Test
 	public void testAnalyseMood() {
 		//fail("Not yet implemented");
-		assertEquals("SAD",moodanalyzer.analyseMood("I am in Sad mood"));
-		assertEquals("HAPPY",moodanalyzer.analyseMood("I am in any mood"));		
+		MoodAnalyzer object1=new MoodAnalyzer("I am in Sad mood");
+		MoodAnalyzer object2=new MoodAnalyzer("I am in any mood");
+		
+		assertEquals("SAD",object1.analyseMood());
+		assertEquals("HAPPY",object2.analyseMood());		
 	}
 
 }
