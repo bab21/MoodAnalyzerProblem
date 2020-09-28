@@ -2,33 +2,29 @@ package com.capgemini;
 
 public class MoodAnalyzer {
 	public String message;
-	public MoodAnalyzer() {
-		
-	}
+	
 	public MoodAnalyzer(String message) {
 		this.message=message;
 	}
 	
-	public String analyseMood() {
+	public String analyseMood() throws MoodAnalysisException {
 		try {
+		if(message.length()==0)
+			throw new MoodAnalysisException(MoodAnalysisException.ExceptionType.ENTERED_EMPTY,"Please enter proper mood");
+		
 		if(message.toLowerCase().contains("sad"))
 			return "SAD";
 		else return "HAPPY";
+		
 		}
 		catch(NullPointerException e){
-			System.out.println("Exception handled");
-			return "HAPPY";
+			throw new MoodAnalysisException(MoodAnalysisException.ExceptionType.ENTERED_NULL, "Please enter proper mood");
 		}
 		
 	}
-	public static void main(String[] args) {
-		MoodAnalyzer objS=new MoodAnalyzer("I am in sad mood");
-		String ans1=objS.analyseMood();
-		System.out.println("Analyzing mood result: "+ans1);
+	public static void main(String[] args) throws MoodAnalysisException {
 		
-		MoodAnalyzer objH=new MoodAnalyzer("I am in any mood");
-		String ans2=objH.analyseMood();
-		System.out.println("Analyzing mood result: "+ans2);
+		System.out.println("Inside main");
 		
 	}
 
